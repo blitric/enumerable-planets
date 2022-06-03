@@ -9,6 +9,19 @@
 </head>
 <body>
 <h1>Pick a planet:</h1>
+<!--ul>
+    <li th:each = "planet: ${planets}" th:text = "${planet.name}"> </li>
+</ul-->
 
+<table class = "table table-striped">
+    <thead>
+    <th>Planet Name</th>
+    <th>Year in Earth Days</th>
+    </thead>
+    <tr th:each = "planet: ${planets}">
+        <td th:text = "${planet.name}"></td>
+        <td th:text = "${planet.yearLength}"></td>
+    </tr>
+</table>
 </body>
 </html>
